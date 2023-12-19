@@ -1,0 +1,42 @@
+{
+    "name": "felixxxxx/drachenfelscrm",
+    "description": "drachenfelscrm Bundle",
+    "license": "LGPL-3.0-or-later",
+    "type": "contao-bundle",
+    "authors": [
+        {
+            "name": "Felix Seybold",
+            "homepage": "www.pluus-design.de"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.2",
+        "contao/core-bundle": "^4.13",
+        "symfony/config": "^5.4",
+        "symfony/dependency-injection": "^5.4",
+        "symfony/http-kernel": "^5.4"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+
+
+    "extra": {
+        "contao-manager-plugin": "felixxxxx\\drachenfelscrm\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "felixxxxx\\drachenfelscrm\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    }
+}
